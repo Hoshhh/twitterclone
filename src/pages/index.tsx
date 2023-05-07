@@ -71,12 +71,12 @@ const Feed = () => {
         ))
       }
     </div>
-  );
-};
+  )
+}
 
 const Home: NextPage = () => {
-  const {isLoaded: userLoaded, isSignedIn} = useUser();
-  
+  const { isLoaded: userLoaded, isSignedIn } = useUser();
+
   api.posts.getAll.useQuery();
 
   if (!userLoaded) return <div />
@@ -101,7 +101,6 @@ const Home: NextPage = () => {
               <CreatePostWizard />
             }
           </div>
-
           <Feed />
         </div>
       </main>
